@@ -1,4 +1,4 @@
-// src/Controllers/taskController.js
+
 import Task from "../Models/task.js";
 
 const createTask = async (req, res) => {
@@ -25,7 +25,7 @@ const createTask = async (req, res) => {
 // Get tasks for the logged-in user
 const getTasks = async (req, res) => {
   try {
-    const tasks = await Task.find({ owner: req.user._id }); // Fetch tasks only belonging to the user
+    const tasks = await Task.find({ owner: req.user._id });
     res.status(200).json(tasks);
   } catch (err) {
     console.error("Get Tasks Error:", err.message);
@@ -36,9 +36,9 @@ const getTasks = async (req, res) => {
 // Update task status
 const updateTaskStatus = async (req, res) => {
   try {
-    const { status } = req.body; // No need to include taskId in body, it's in the URL
+    const { status } = req.body; 
     const task = await Task.findOneAndUpdate(
-      { _id: req.params.id, owner: req.user._id }, // Ensure task belongs to the logged-in user
+      { _id: req.params.id, owner: req.user._id }, 
       { status },
       { new: true }
     );
@@ -59,7 +59,7 @@ const deleteTask = async (req, res) => {
   try {
     const task = await Task.findOneAndDelete({
       _id: req.params.id,
-      owner: req.user._id, // Ensure task belongs to the logged-in user
+      owner: req.user._id, 
     });
 
     if (!task) {

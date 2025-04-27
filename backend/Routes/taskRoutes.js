@@ -1,4 +1,3 @@
-// src/Routes/taskRoutes.js
 import express from "express";
 import { verifyToken } from "../middleware/authMiddleware.js";
 import {
@@ -6,7 +5,7 @@ import {
   getTasks,
   updateTaskStatus,
   deleteTask,
-} from "../Controllers/taskController.js"; // Import task controller
+} from "../Controllers/taskController.js"; 
 
 const router = express.Router();
 

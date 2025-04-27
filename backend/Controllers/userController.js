@@ -6,7 +6,7 @@ const generateToken = (userId) => {
   return jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
 
-// @route POST /api/users/register
+//POST /api/users/register
 const registerUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -31,7 +31,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-// @route POST /api/users/login
+//POST /api/users/login
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -59,7 +59,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-// @route GET /api/users/profile
+//GET /api/users/profile
 const getProfile = async (req, res) => {
   try {
     if (!req.user) {

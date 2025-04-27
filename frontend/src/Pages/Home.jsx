@@ -7,10 +7,10 @@ import "./Home.css";
 function Home() {
   const navigate = useNavigate();
 
-  // Redirect to login page if not logged in
+  // Redirecting the user to login if he's not logged in
   useEffect(() => {
     if (!isLoggedIn()) {
-      navigate("/login"); // Redirect to login if not authenticated
+      navigate("/login"); 
     }
   }, []);
 
@@ -42,7 +42,6 @@ function Home() {
     setNewTask({ ...newTask, [e.target.name]: e.target.value });
   };
 
-  // Handle task addition
   const handleAddTask = async () => {
     try {
       const taskData = {
@@ -74,7 +73,7 @@ function Home() {
     }
   };
 
-  // Handle task editing 
+  // Task editing 
   const handleEditTask = (task) => {
     setEditingTask(task);
     setNewTask({
@@ -85,7 +84,7 @@ function Home() {
     });
   };
 
-  // Handle task update (Save edited task)
+  // Task update
   const handleSaveEdit = (e) => {
     e.preventDefault();
     const updatedTasks = tasks.map((task) =>
@@ -96,7 +95,7 @@ function Home() {
     setEditingTask(null);
   };
 
-  // Handle task delete
+  // Task delete
   const handleDeleteTask = async (taskId) => {
     try {
       await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
@@ -111,7 +110,7 @@ function Home() {
       console.error("Failed to delete task:", err);
     }
   };
-
+//RenderTakss
   const renderTasks = (status) =>
     tasks
       .filter((task) => task.status === status)

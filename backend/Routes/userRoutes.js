@@ -10,6 +10,6 @@ const router = express.Router();
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.get("/profile", verifyToken, getProfile); // Secure profile route
+router.get("/profile", verifyToken, getProfile); 
 
 export default router;

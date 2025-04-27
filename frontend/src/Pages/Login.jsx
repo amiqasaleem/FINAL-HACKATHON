@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import React, { useState } from "react";
 import './Auth.css';
 
@@ -11,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // API call to login
+   
     try {
       const res = await fetch("http://localhost:3000/api/users/login", {
         method: "POST",

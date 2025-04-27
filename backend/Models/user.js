@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import bcrypt from 'bcrypt';
 
-// Define the User Schema
+//User Schema
 const UserSchema = new Schema({
   username: {
     type: String,
@@ -10,7 +10,7 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
-    unique: true, // Ensure email is unique
+    unique: true,
   },
   password: {
     type: String,
@@ -18,18 +18,16 @@ const UserSchema = new Schema({
   },
 });
 
-// Hash the password before saving it
+
 UserSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next(); // Don't hash if the password isn't modified
+  if (!this.isModified('password')) return next(); 
   
-// Hash the password with salt rounds (number of times to apply hashing)
   this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
-// Method to check if password matches the one in the database
 UserSchema.methods.matchPassword = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password); // Compare entered password with stored password
+  return await bcrypt.compare(enteredPassword, this.password); 
 };
 
 const UserModel = model("User", UserSchema);

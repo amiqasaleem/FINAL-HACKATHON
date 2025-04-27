@@ -7,8 +7,8 @@ import About from "./pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Products from "./Pages/Products.jsx";
 import Navbar from "./Components/Navbar.jsx"
-import Profile from "./pages/Profile.jsx"; // Protected route
-import PrivateRoute from "./Components/PrivateRoute";
+import Profile from "./pages/Profile.jsx"; 
+
 const router = createBrowserRouter([
   {
     path: "/",

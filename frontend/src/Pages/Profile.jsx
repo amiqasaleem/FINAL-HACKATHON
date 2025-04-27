@@ -1,9 +1,8 @@
-// src/pages/Profile.jsx
 import React, { useState, useEffect } from "react";
 
 function Profile() {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // Optional loader
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
