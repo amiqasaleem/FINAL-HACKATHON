@@ -26,7 +26,7 @@ function Home() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/tasks", {
+        const res = await axios.get("https://final-hackathon-backend-fh9v.onrender.com/api/tasks", {
           headers: { Authorization: `Bearer ${getToken()}` },
         });
         setTasks(res.data);
@@ -51,7 +51,7 @@ function Home() {
         status: newTask.status,
       };
 
-      const response = await fetch("http://localhost:3000/api/tasks", {
+      const response = await fetch("https://final-hackathon-backend-fh9v.onrender.com/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ function Home() {
   // Task delete
   const handleDeleteTask = async (taskId) => {
     try {
-      await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
+      await fetch(`https://final-hackathon-backend-fh9v.onrender.com/api/tasks/${taskId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

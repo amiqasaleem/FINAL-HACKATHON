@@ -8,7 +8,7 @@ import taskRoutes from "./Routes/taskRoutes.js";
 
 
 const corsOptions = {
-  origin: 'http://localhost:5173',  
+  origin: ['http://localhost:5173', 'https://gentle-quokka-f7cf3f.netlify.app'], 
   methods: 'GET, POST, PUT, DELETE',  
   credentials: true, 
 };
@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 //connect to database
-connectDB();
+connectDB(); 
 
 // Use the routes
 app.use('/api/users', router);
