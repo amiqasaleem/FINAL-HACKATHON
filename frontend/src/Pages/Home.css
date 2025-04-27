@@ -1,0 +1,127 @@
+/* src/pages/Home.css */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+.home-board {
+  padding: 20px;
+  text-align: center;
+}
+
+.board-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+.add-task-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task-form input,
+.add-task-form button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.add-task-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.task-card {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* button styling */
+
+.task-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.task-buttons button {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+}
+
+.task-buttons button:hover {
+  background-color: #d5d5d5;
+}
+/* src/pages/Home.css */
+.task-buttons {
+  margin-top: 10px;
+}
+
+.task-buttons button {
+  margin-right: 5px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.task-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.task-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.add-task-form input,
+.add-task-form button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.add-task-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.add-task-form button:hover {
+  background-color: #0056b3;
+}
