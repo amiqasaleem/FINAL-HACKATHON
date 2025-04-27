@@ -8,11 +8,10 @@ import taskRoutes from "./Routes/taskRoutes.js";
 
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'https://gentle-quokka-f7cf3f.netlify.app'], 
-  methods: 'GET, POST, PUT, DELETE',  
-  credentials: true, 
+  origin: 'https://clinquant-bavarois-905346.netlify.app',
+  methods: 'GET, POST, PUT, DELETE',
+  credentials: true,
 };
-
 // Use the CORS middleware 
 app.use(cors(corsOptions));
 
